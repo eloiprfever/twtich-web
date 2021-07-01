@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'hackathon-subscriptions'`, () => {
+  it(`should have as title 'twitch-web'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('hackathon-subscriptions');
+    expect(app.title).toEqual('twitch-web');
   });
 
   it('should render title', () => {
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain(
-      'hackathon-subscriptions app is running!'
+      'twitch-web app is running!'
     );
   });
 });

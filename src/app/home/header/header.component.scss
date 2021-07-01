@@ -1,0 +1,30 @@
+.banner {
+  display: flex;
+  background: linear-gradient(180deg, #0f0428 85.42%, rgba(15, 4, 40, 0) 100%);
+  mix-blend-mode: normal;
+
+  &__content {
+    position: relative;
+    margin: auto;
+    display: flex;
+  }
+
+  .title {
+    position: absolute;
+    text-shadow: 0px 0px 20px #00ffff;
+  }
+
+  .left-image {
+    width: 460px;
+    height: 486px;
+  }
+
+  .right-image {
+    width: 393px;
+    height: 451px;
+  }
+
+  .logos {
+    position: absolute;
+  }
+}

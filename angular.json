@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hackathon-subscriptions": {
+    "twitch-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hackathon-subscriptions",
+            "outputPath": "dist/twitch-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hackathon-subscriptions:build"
+            "browserTarget": "twitch-web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "hackathon-subscriptions:build:production"
+              "browserTarget": "twitch-web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hackathon-subscriptions:build"
+            "browserTarget": "twitch-web:build"
           }
         },
         "test": {
@@ -102,16 +102,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "hackathon-subscriptions:serve"
+            "devServerTarget": "twitch-web:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "hackathon-subscriptions:serve:production"
+              "devServerTarget": "twitch-web:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "hackathon-subscriptions"
+  "defaultProject": "twitch-web"
 }

@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
+body {
+  margin: 0;
+  background: url("assets/img/background.jpeg"), #160522;
+  font-family: Montserrat;
+}
+
+.text {
+  color: white;
+  font-style: normal;
+
+  &--big {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+  }
+
+  &--medium {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
+  &--small {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+}
