@@ -10,7 +10,7 @@ import { User } from '../models/user';
   providedIn: 'root',
 })
 export class ApiService {
-  private readonly url = 'https://e35e473ae879.ngrok.io/get-coupon-code';
+  private readonly url = 'https://65f73f503073.ngrok.io/get-coupon-code';
 
   constructor(private http: HttpClient) {}
 
