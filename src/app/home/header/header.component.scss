@@ -3,37 +3,35 @@
   background: linear-gradient(180deg, #0f0428 85.42%, rgba(15, 4, 40, 0) 100%);
   mix-blend-mode: normal;
 
-  &__topbar {
+  .left-icons {
+    position: absolute;
+    left: 16px;
+    top: 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 16px;
-    width: 100%;
+    gap: 16px;
 
-    .left-icons {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-
-      img {
-        width: 76px;
-      }
-
-      .text {
-        font-size: 24px;
-      }
-
-      fa-icon {
-        color: white;
-        font-size: 24px;
-      }
+    img {
+      width: 76px;
     }
 
-    .right-icons {
-      fa-icon {
-        color: white;
-        font-size: 24px;
-      }
+    .text {
+      font-size: 24px;
+    }
+
+    fa-icon {
+      color: white;
+      font-size: 24px;
+    }
+  }
+  .right-icons {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+
+    fa-icon {
+      color: white;
+      font-size: 24px;
     }
   }
 
