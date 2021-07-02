@@ -9,8 +9,16 @@
 .store-logos {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   .logo {
-    width: 130px;
+    cursor: pointer;
+    &__apple {
+      width: 130px;
+    }
+
+    &__google {
+      width: 160px;
+    }
   }
 }
