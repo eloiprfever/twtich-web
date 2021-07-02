@@ -1,0 +1,16 @@
+.card {
+  background: #8b95f1;
+  padding: 16px;
+  border-radius: 5px;
+  width: 340px;
+  margin-top: 48px;
+}
+
+.store-logos {
+  display: flex;
+  justify-content: center;
+
+  .logo {
+    width: 130px;
+  }
+}
