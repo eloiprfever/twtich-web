@@ -7,7 +7,7 @@
           Hey {{ user.display_name }}, your 5€ code to use in fever app is:
         </h2>
         <div class="code">
-          <span class="text text--small">HOLATWITCH</span>
+          <span class="text text--small">{{ user.code }}</span>
         </div>
       </div>
     </ng-container>
@@ -25,7 +25,7 @@
 
 <ng-template #login>
   <div class="h-center v-align">
-    <h2 class="text">Login with your twitch account to get the fever code:</h2>
+    <h2 class="text">Log in with your twitch account to get the fever code:</h2>
     <app-login></app-login>
   </div>
 </ng-template>

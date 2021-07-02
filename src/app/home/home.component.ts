@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, filter, map, switchMap } from 'rxjs/operators';
 
 import { LoginService } from '../services/login.service';
 import { TwitchService } from '../services/twitch.service';
 import { User } from '../models/user';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private twitchService: TwitchService
+    private twitchService: TwitchService,
+    private apiService: ApiService
   ) {
     const hashParams = location.hash.substring(1);
     if (!!hashParams) {
@@ -31,9 +33,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.user$ = this.twitchService
-      .getUser()
-      .pipe(catchError((err) => of(null)));
+    this.user$ = this.twitchService.getUser().pipe(
+      catchError((err) => of(null)),
+      filter((user) => !!user),
+      switchMap((user) =>
+        this.apiService.getCode(user).pipe(map((code) => ({ ...user, code })))
+      )
+    );
   }
 
   private getUserInfo(hashParams) {

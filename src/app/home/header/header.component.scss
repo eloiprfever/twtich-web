@@ -3,6 +3,40 @@
   background: linear-gradient(180deg, #0f0428 85.42%, rgba(15, 4, 40, 0) 100%);
   mix-blend-mode: normal;
 
+  &__topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px;
+    width: 100%;
+
+    .left-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      img {
+        width: 76px;
+      }
+
+      .text {
+        font-size: 24px;
+      }
+
+      fa-icon {
+        color: white;
+        font-size: 24px;
+      }
+    }
+
+    .right-icons {
+      fa-icon {
+        color: white;
+        font-size: 24px;
+      }
+    }
+  }
+
   &__content {
     position: relative;
     width: 100%;
