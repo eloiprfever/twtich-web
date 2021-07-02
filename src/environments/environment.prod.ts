@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  redirectUrl: '',
+  redirectUrl: 'https://twtich-web.vercel.app/home',
 };
