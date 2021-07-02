@@ -4,9 +4,13 @@
     <ng-container *ngIf="user$ | async as user; else login">
       <div class="container">
         <h2 class="text">
-          Hey {{ user.display_name }}, your 5€ code to use in fever app is:
+          Hey {{ user.display_name }},
+          <span *ngIf="user?.code">your 5€ code to use in fever app is:</span>
+          <span *ngIf="!user?.code"
+            >subscribe to the twitch channel to get your code.</span
+          >
         </h2>
-        <div class="code">
+        <div *ngIf="user?.code" class="code">
           <span class="text text--small">{{ user.code }}</span>
         </div>
       </div>

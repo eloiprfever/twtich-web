@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { User } from '../models/user';
 
@@ -13,11 +14,13 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  getCode(user: User): Observable<any> {
-    return this.http.get(this.url, {
-      params: {
-        user: user.id,
-      },
-    });
+  getCode(user: User): Observable<string> {
+    return this.http
+      .get<{ code: string }>(this.url, {
+        params: {
+          user: user.id,
+        },
+      })
+      .pipe(map((response) => response.code));
   }
 }

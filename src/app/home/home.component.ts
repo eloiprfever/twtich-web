@@ -29,15 +29,16 @@ export class HomeComponent implements OnInit {
         this.loginService.login(this.userInfo['access_token']);
       }
     }
-    console.log(this.userInfo);
   }
 
   ngOnInit(): void {
     this.user$ = this.twitchService.getUser().pipe(
-      catchError((err) => of(null)),
       filter((user) => !!user),
       switchMap((user) =>
-        this.apiService.getCode(user).pipe(map((code) => ({ ...user, code })))
+        this.apiService.getCode(user).pipe(
+          map((code) => ({ ...user, code })),
+          catchError(() => of(user))
+        )
       )
     );
   }
