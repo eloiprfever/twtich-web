@@ -1,0 +1,11 @@
+<div class="plan">
+  <img class="picture" [src]="'/assets/img/plans/' + plan.img" />
+  <div class="plan__info">
+    <div class="text">{{ plan.name }}</div>
+    <div class="stars">
+      <fa-icon [icon]="faStar"></fa-icon>
+      <span> {{ plan.rating }}/5</span>
+    </div>
+    <div class="price">{{ plan.price | currency }}</div>
+  </div>
+</div>

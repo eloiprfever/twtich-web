@@ -8,6 +8,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CardMessageComponent } from './card-message/card-message.component';
 import { LoginComponent } from './login/login.component';
+import { PlanListComponent } from './plan-list/plan-list.component';
+import { PlanComponent } from './plan/plan.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     CardMessageComponent,
     LoginComponent,
+    PlanListComponent,
+    PlanComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, FontAwesomeModule],
 })
