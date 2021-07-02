@@ -5,8 +5,7 @@
 
   &__content {
     position: relative;
-    margin: auto;
-    display: flex;
+    width: 100%;
   }
 
   &__message {
@@ -14,29 +13,43 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
   }
 
   .title {
     text-shadow: 0px 0px 20px #00ffff;
   }
 
-  .left-image {
-    width: 460px;
-    height: 486px;
-  }
+  .images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 48px;
 
-  .right-image {
-    width: 393px;
-    height: 451px;
+    .left-image {
+      width: 460px;
+      height: 486px;
+    }
+
+    .right-image {
+      width: 393px;
+      height: 451px;
+    }
   }
 
   .logos {
     display: flex;
-    gap: 32px;
+    gap: 64px;
+    margin-top: 40px;
 
     fa-icon {
       color: white;
       font-size: 72px;
+    }
+
+    .fever-logo {
+      width: 200px;
+      height: 60px;
     }
   }
 }
